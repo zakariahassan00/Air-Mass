@@ -1,0 +1,424 @@
+body {
+  background-color: #e9ebee;
+  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  overflow-x: hidden;
+}
+
+* {
+  font-family: "Helvetica";
+}
+/*  NavBar */
+
+nav {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  top: 0;
+  color: #fff;
+  z-index: 2222;
+  max-height: 80px;
+  overflow: hidden;
+}
+
+.scrolled {
+  position: fixed;
+  background-color: #000;
+  width: 100%;
+  display: flex;
+  top: 0px;
+  color: #fff;
+  z-index: 2222;
+  transition: 0.8s;
+}
+
+nav div {
+  padding: 15px;
+  width: 40%;
+  text-align: center;
+}
+
+nav .logo {
+  width: 40%;
+  height: 100px;
+}
+
+nav .logo img {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  bottom: 40px;
+}
+
+/* nav items secion */
+.nav-list {
+  list-style: none;
+  width: 50%;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+}
+
+.item {
+  width: 15%;
+  text-align: center;
+}
+
+.item a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/****************  Hero  ****************/
+
+.hero {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/wires.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #000;
+}
+
+.main-content {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  line-height: 1.8;
+  text-align: center;
+  top: 35%;
+  color: #fff;
+  animation: slideUp 1.5s;
+}
+
+.main-content h1 {
+  font-size: 3em;
+  letter-spacing: 20px;
+  animation: slideRight 1.5s;
+}
+
+.products-btn {
+  border: 2px #ff4500 solid;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px;
+  width: 200px;
+  height: 35px;
+  font-size: 18px;
+}
+
+@keyframes slideRight {
+  0% {
+    position: relative;
+    left: -1700px;
+  }
+  100% {
+    position: relative;
+    left: 0px;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    left: -1700px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+/* about */
+
+.about {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  margin: auto;
+  margin-bottom: 100px;
+  padding: 15px 50px;
+  min-height: 500px;
+  font-family: "helvetica";
+  position: relative;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.about-heading {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.about-heading h3 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #0e1015;
+  font-family: "Helvetica";
+}
+
+.about-content {
+  padding: 20px;
+  text-align: justify;
+  color: #808080;
+}
+
+/* products */
+.sample_section {
+  height: 700px;
+}
+
+.sample_title {
+  padding: 50px;
+}
+
+.sample_section h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #0e1015;
+  font-family: "Helvetica";
+}
+
+.sample {
+  width: 100%;
+  height: 100%;
+  /* margin-top: 20px;
+    margin-bottom: 100px; */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* .products_sample_bg {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/powertower2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.products_sample_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  opacity: 0.6;
+} */
+
+.products_sample {
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  padding: 10px 50px;
+}
+
+.products_sample h2 {
+  text-align: center;
+}
+
+.products_sample_list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.products_sample_list li {
+  width: 25%;
+}
+
+/*  contact */
+
+.contact_widget {
+  margin: 100px auto 50px;
+  width: 100%;
+  height: 100%;
+  color: #3f51b5;
+  text-align: center;
+}
+
+.contact_heading {
+  font-size: 1.8em;
+  letter-spacing: 8px;
+  color: #282e34;
+  text-align: center;
+}
+
+.contact_main {
+  color: #808080;
+}
+
+.contact_methods {
+  height: 200px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact_method_icon {
+  color: #3f51b5;
+  font-size: 40px;
+  border: 2px solid #3f51b5;
+  border-radius: 50%;
+  margin: 20px 80px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+/*  Footer  */
+.social {
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  color: #fff;
+}
+
+.social i {
+  position: relative;
+  top: 50%;
+  margin: 10px 15px;
+  color: #fff;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* list */
+
+.products-list {
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+}
+
+/*  Card */
+.card {
+  width: 300px;
+  height: 350px;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  /* cursor: pointer; */
+}
+
+.card_head {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card_head img {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+
+.card_body {
+  text-align: center;
+  font-family: "Helvetica";
+}
+
+.card_body h4 {
+  margin: 20px auto;
+}
+
+.card_head img:hover {
+  transform: scale(1.4, 1.4);
+}
+
+/* Team */
+.team {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.team_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/team.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.team_bg_overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.team_main {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.team_main h2 {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+/*  line  */
+.line {
+  width: 50px;
+  height: 5px;
+  background-color: #a65200;
+  margin: 10px auto;
+}
+
+.btn {
+  width: 130px;
+  height: 30px;
+  color: #fff;
+  background-color: #ee4800;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
