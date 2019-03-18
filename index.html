@@ -170,6 +170,31 @@
           </div>
         </div>
       </section>
+      <section id="Map" class="googleMap">
+        <div id="googleMap"></div>
+      </section>
+      <section id="message" class="message">
+        <div>
+          <div class="email">
+            <h1>Send Message Us</h1>
+            <div class="line"></div>
+            <input type="text" placeholder="Your Name" />
+            <input type="text" placeholder="Your Email" />
+            <input type="text" placeholder="Subject" />
+            <textarea name="msg" id="msg" placeholder="Message"></textarea>
+          </div>
+          <div class="get_in_touch">
+            <h1>Get in Touch</h1>
+            <div class="line"></div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+              dolorum dolorem soluta quidem expedita aperiam aliquid at. Totam
+              magni ipsum suscipit amet? Autem nemo esse laboriosam ratione
+              nobis mollitia inventore?
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="social">
@@ -179,6 +204,8 @@
         <i class="fab fa-linkedin"></i>
       </div>
     </footer>
+
+    <!-- scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -191,5 +218,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfrzTA76T3wTL2AxnXFRdyRfA_cPC7XZ8&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="./js/googleMap.js"></script>
   </body>
 </html>
