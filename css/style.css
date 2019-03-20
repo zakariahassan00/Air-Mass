@@ -1,13 +1,11 @@
 body {
   background-color: #e9ebee;
-  font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
   overflow-x: hidden;
 }
 
 * {
-  font-family: "Helvetica";
+  font-family: Helvetica;
 }
 /*  NavBar */
 
@@ -88,7 +86,7 @@ nav .logo img {
 .bg {
   width: 100%;
   height: 100%;
-  background-image: url("../images/wires.jpg");
+  background-image: url("../images/powertower1.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -159,7 +157,6 @@ nav .logo img {
   align-items: center;
   display: flex;
   margin: auto;
-  margin-bottom: 100px;
   padding: 15px 50px;
   min-height: 500px;
   font-family: "helvetica";
@@ -316,7 +313,7 @@ nav .logo img {
 
 .social i {
   position: relative;
-  top: 50%;
+  top: 15%;
   margin: 10px 15px;
   color: #fff;
   font-size: 35px;
@@ -340,7 +337,7 @@ nav .logo img {
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 .card_head {
@@ -357,11 +354,19 @@ nav .logo img {
 
 .card_body {
   text-align: center;
-  font-family: "Helvetica";
 }
 
 .card_body h4 {
+  color: #0e1015;
+  font-size: 20px;
   margin: 20px auto;
+}
+
+.card_body a {
+  box-sizing: border-box;
+  display: block;
+  text-decoration: none;
+  padding-top: 5px;
 }
 
 .card_head img:hover {
@@ -371,7 +376,7 @@ nav .logo img {
 /* Team */
 .team {
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   position: relative;
@@ -419,6 +424,8 @@ nav .logo img {
 }
 
 .btn {
+  margin: auto;
+  display: block;
   width: 130px;
   height: 30px;
   color: #fff;
@@ -504,4 +511,47 @@ nav .logo img {
   font-weight: 100;
   font-size: 1.2rem;
   color: #4e4e4e;
+}
+/* members */
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.member {
+  text-align: center;
+  color: #fff;
+}
+
+.member_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 35px auto 20px;
+}
+.member_img img {
+  width: 250px;
+  height: 166px;
+}
+
+.member-info h1 {
+  font-weight: 300;
+  margin-bottom: 15px;
+  font-size: 36px;
+}
+
+.member-info p {
+  font-weight: 200;
+  font-size: 16px;
+  padding: 0 25px;
+}
+
+/* submit button */
+#submit {
+  width: 200px;
+  margin-top: 20px;
 }

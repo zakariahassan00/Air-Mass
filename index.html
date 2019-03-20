@@ -13,6 +13,12 @@
       crossorigin="anonymous"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="lib/owlcarousel/assets/owl.theme.default.min.css"
+    />
+    <link href="./lib/lightbox/css/lightbox.css" rel="stylesheet" />
     <title>Air Mass</title>
   </head>
   <body>
@@ -65,12 +71,23 @@
               <img src="./images/products/product1/plug.jpg" alt="" />
             </div>
             <div class="card_body">
-              <h4>Electric Cable</h4>
+              <h4>Product</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquam, porro?
               </p>
-              <button class="btn">View</button>
+              <a
+                class="btn"
+                href="./images/products/product1/plug.jpg"
+                data-lightbox="plug"
+                data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?"
+                >View</a
+              >
             </div>
           </div>
           <div class="card" data-aos="fade-up">
@@ -78,12 +95,23 @@
               <img src="./images/products/product1/plugY.jpg" alt="" />
             </div>
             <div class="card_body">
-              <h4>Electric Cable</h4>
+              <h4>Product</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquam, porro?
               </p>
-              <button class="btn">View</button>
+              <a
+                class="btn"
+                href="./images/products/product1/plugY.jpg"
+                data-lightbox="plugY"
+                data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?"
+                >View</a
+              >
             </div>
           </div>
           <div class="card" data-aos="fade-left">
@@ -91,12 +119,23 @@
               <img src="./images/products/product1/plugX.jpg" alt="" />
             </div>
             <div class="card_body">
-              <h4>Electric Cable</h4>
+              <h4>Product</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aliquam, porro?
               </p>
-              <button class="btn">View</button>
+              <a
+                class="btn"
+                href="./images/products/product1/plugX.jpg"
+                data-lightbox="plugX"
+                data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquam, porro?"
+                >View</a
+              >
             </div>
           </div>
         </div>
@@ -132,12 +171,38 @@
           </div>
         </div>
       </section>
-      <section id="team" class="team">
+      <section id="team" class="team" data-aos="fade-up">
         <div class="team_bg"></div>
         <div class="team_bg_overlay"></div>
         <div class="team_main">
           <h2>Meet Our Team</h2>
           <div class="line"></div>
+          <div class="members owl-carousel">
+            <div class="member">
+              <div class="member_img">
+                <img src="./images/members/member1/profile-img.jpg" alt="" />
+              </div>
+              <div class="member-info">
+                <h1>J.Cole</h1>
+                <p>
+                  fool me once shame on you, fool me twice cat put the blame on
+                  you
+                </p>
+              </div>
+            </div>
+            <div class="member">
+              <div class="member_img">
+                <img src="./images/members/member2/profile-img.jpg" alt="" />
+              </div>
+              <div class="member-info">
+                <h1>J.Aniston</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus, deleniti.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section id="contact" data-aos="fade-up">
@@ -182,6 +247,7 @@
             <input type="text" placeholder="Your Email" />
             <input type="text" placeholder="Subject" />
             <textarea name="msg" id="msg" placeholder="Message"></textarea>
+            <button id="submit" class="btn">Send</button>
           </div>
           <div class="get_in_touch">
             <h1>Get in Touch</h1>
@@ -217,12 +283,14 @@
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"
     ></script>
-    <script src="js/main.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfrzTA76T3wTL2AxnXFRdyRfA_cPC7XZ8&callback=initMap"
       async
       defer
     ></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./lib/lightbox/js/lightbox.js"></script>
     <script src="./js/googleMap.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
