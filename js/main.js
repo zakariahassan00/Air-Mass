@@ -24,4 +24,36 @@ $(document).ready(function() {
       }
     }
   });
+
+  // smooth scroll
+  let navElements = $(".scroll");
+  navElements.on("click", function(e) {
+    e.preventDefault();
+    let target = $(this.hash).offset().top - 80;
+    console.log(target);
+    $("body, html").animate(
+      {
+        scrollTop: target
+      },
+      1300
+    );
+  });
+
+  // add active class to nav elements
+  $(window).scroll(function() {
+    let scrollTop = $(this).scrollTop();
+
+    navElements.each(function(e) {
+      let sectionOffSet = $(this.hash).offset().top - 80;
+
+      if (sectionOffSet <= scrollTop) {
+        $(this).addClass("active");
+        $(this)
+          .parent()
+          .siblings()
+          .children()
+          .removeClass("active");
+      }
+    });
+  });
 });

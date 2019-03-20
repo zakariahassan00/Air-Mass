@@ -11,12 +11,12 @@ body {
 
 nav {
   width: 100%;
+  max-height: 80px;
   position: absolute;
   display: flex;
   top: 0;
   color: #fff;
   z-index: 2222;
-  max-height: 80px;
   overflow: hidden;
   font-size: 18px;
 }
@@ -555,4 +555,10 @@ nav .logo img {
 #submit {
   width: 200px;
   margin-top: 20px;
+}
+
+/* active */
+li .scroll.active {
+  border-bottom: #ee4800 3px solid;
+  padding-bottom: 5px;
 }
