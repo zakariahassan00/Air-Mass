@@ -56,4 +56,31 @@ $(document).ready(function() {
       }
     });
   });
+
+  $(".bars").click(function() {
+    let navList = $(".nav-list").css("display");
+    navList == "block" ? hideMenu() : showMenu();
+  });
+
+  $(".nav-list").click(function() {
+    hideMenu();
+  });
+
+  function showMenu() {
+    $(".nav-list").css("display", "block");
+    $("nav").css({
+      "background-color": "#0e1015",
+      height: "220px"
+    });
+    $(".bars").css("transform", "rotate(90deg)");
+  }
+
+  function hideMenu() {
+    $(".nav-list").css("display", "none");
+    $("nav").css({
+      "background-color": "",
+      height: "80px"
+    });
+    $(".bars").css("transform", "rotate(0)");
+  }
 });

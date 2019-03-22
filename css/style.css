@@ -11,37 +11,37 @@ html {
 
 nav {
   width: 100%;
-  max-height: 80px;
+  height: 80px;
   position: absolute;
   display: flex;
   top: 0;
-  color: #fff;
   z-index: 2222;
-  overflow: hidden;
+  color: #fff;
   font-size: 16px;
+  transition: 0.7s;
 }
 
 .scrolled {
-  position: fixed;
-  background-color: #0e1015;
   width: 100%;
-  display: flex;
+  position: fixed;
   top: 0px;
-  color: #fff;
+  display: flex;
   z-index: 2222;
-  transition: 0.8s;
+  color: #fff;
+  background-color: #0e1015;
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+  transition: 0.8s;
 }
 
 nav div {
-  padding: 15px;
   width: 40%;
+  padding: 15px;
   text-align: center;
 }
 
 nav .logo {
   width: 40%;
-  height: 100px;
+  height: 80px;
 }
 
 nav .logo img {
@@ -53,15 +53,15 @@ nav .logo img {
 
 /* nav items secion */
 .nav-list {
-  list-style: none;
   width: 50%;
   min-height: 50px;
+  margin: 0;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px;
-  margin: 0;
+  list-style: none;
 }
 
 .item {
@@ -70,8 +70,8 @@ nav .logo img {
 }
 
 .item a {
-  color: #fff;
   font-weight: 500;
+  color: #fff;
   text-decoration: none;
   transition: border 0.5s;
 }
@@ -79,24 +79,30 @@ nav .logo img {
 .bars {
   width: 35px;
   height: 35px;
-  display: none;
   padding: 0;
+  display: none;
   position: absolute;
-  right: 15px;
   top: 25px;
+  right: 15px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .bars i {
   font-size: 24px;
 }
 
+.bars.clicked {
+  transform: rotate(90deg);
+}
+
 /****************  Hero  ****************/
 
 .hero {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .bg {
@@ -598,6 +604,18 @@ li .scroll.active {
   /* navbar */
   .nav-list {
     display: none;
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    padding: 0;
+  }
+  .item {
+    margin: 12px auto;
+  }
+
+  li .scroll.active {
+    border: none;
+    color: #ee4800;
   }
 
   .bars {
