@@ -1,6 +1,6 @@
-body {
+body,
+html {
   background-color: #e9ebee;
-
   overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@ nav {
   color: #fff;
   z-index: 2222;
   overflow: hidden;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .scrolled {
@@ -65,7 +65,7 @@ nav .logo img {
 }
 
 .item {
-  width: 15%;
+  width: 120px;
   text-align: center;
 }
 
@@ -73,6 +73,21 @@ nav .logo img {
   color: #fff;
   font-weight: 500;
   text-decoration: none;
+  transition: border 0.5s;
+}
+
+.bars {
+  width: 35px;
+  height: 35px;
+  display: none;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+}
+
+.bars i {
+  font-size: 24px;
 }
 
 /****************  Hero  ****************/
@@ -87,8 +102,10 @@ nav .logo img {
 .bg {
   width: 100%;
   height: 100%;
-  background-image: url("../images/wires.jpg");
+  background-image: url("../images/powertower1.jpg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -190,7 +207,7 @@ nav .logo img {
 
 /* products */
 .sample_section {
-  height: 700px;
+  min-height: 700px;
 }
 
 .sample_title {
@@ -263,6 +280,10 @@ nav .logo img {
 }
 
 /*  contact */
+.contact {
+  width: 100%;
+  min-height: 300px;
+}
 
 .contact_widget {
   margin: 100px auto 50px;
@@ -288,9 +309,10 @@ nav .logo img {
 }
 
 .contact_methods {
-  height: 200px;
+  min-height: 200px;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
@@ -326,8 +348,11 @@ nav .logo img {
 
 .products-list {
   display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   align-items: center;
-  align-content: space-between;
+  align-content: space-around;
+  justify-content: center;
 }
 
 /*  Card */
@@ -335,7 +360,7 @@ nav .logo img {
   width: 300px;
   height: 350px;
   background-color: #fff;
-  margin: auto;
+  margin: 20px 10px;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
@@ -367,7 +392,7 @@ nav .logo img {
   box-sizing: border-box;
   display: block;
   text-decoration: none;
-  padding-top: 5px;
+  padding-top: 7px;
 }
 
 .card_head img:hover {
@@ -388,6 +413,8 @@ nav .logo img {
   width: 100%;
   height: 100%;
   background-image: url("../images/team.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -453,20 +480,22 @@ nav .logo img {
 
 .message {
   width: 100%;
-  height: 600px;
+  min-height: 600px;
   background-color: #0e1015;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .message > div {
   width: 80%;
-  height: 500px;
+  min-height: 500px;
   background-color: #fff;
   margin: auto;
   border-radius: 10px;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -561,4 +590,89 @@ nav .logo img {
 li .scroll.active {
   border-bottom: #ee4800 3px solid;
   padding-bottom: 5px;
+}
+
+/* BreakPoints */
+
+@media only screen and (max-width: 600px) {
+  /* navbar */
+  .nav-list {
+    display: none;
+  }
+
+  .bars {
+    display: block;
+  }
+
+  /* hero */
+  .bg {
+    background-attachment: scroll;
+  }
+
+  .main-content h1 {
+    font-size: 2em;
+    letter-spacing: 10px;
+  }
+
+  .main-content p {
+    padding: 5px;
+  }
+
+  /* products section */
+  .sample_title {
+    padding: 20px;
+  }
+
+  .sample_section h1 {
+    font-size: 24px;
+  }
+
+  /* about section */
+  .about {
+    padding: 15px;
+  }
+
+  .about-heading h3 {
+    font-size: 24px;
+  }
+
+  /* Team section */
+  .team_bg {
+    background-attachment: scroll;
+  }
+
+  /* map section */
+  .googleMap {
+    margin-top: 50px;
+  }
+
+  /* message */
+  .message {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .email {
+    width: 100%;
+    height: 100%;
+  }
+
+  .get_in_touch {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* navbar */
+  /* .item {
+    width: 20%;
+  } */
+
+  /* .bg {
+    background-attachment: scroll;
+  }
+
+  .team_bg {
+    background-attachment: scroll;
+  } */
 }
