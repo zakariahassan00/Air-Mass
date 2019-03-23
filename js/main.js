@@ -1,5 +1,8 @@
 $(document).ready(function() {
   // on documument scroll change the nav bar to fixed
+  AOS.init({
+    duration: 1300
+  });
 
   $(window).on("scroll", function() {
     let pagePosition = window.scrollY > 120;
@@ -17,7 +20,8 @@ $(document).ready(function() {
     loop: true,
     autoplay: true,
     autoplayTimeout: 4000,
-    // autoplayHoverPause: true,
+    nav: true,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 1
@@ -62,9 +66,13 @@ $(document).ready(function() {
     navList == "block" ? hideMenu() : showMenu();
   });
 
-  $(".nav-list").click(function() {
-    hideMenu();
-  });
+  let bars = $(".bars").css("display");
+  if (bars == "block") {
+    console.log("block");
+    $(".nav-list").click(function() {
+      hideMenu();
+    });
+  }
 
   function showMenu() {
     $(".nav-list").css("display", "block");

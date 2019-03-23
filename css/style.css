@@ -7,7 +7,20 @@ html {
 * {
   font-family: Helvetica;
 }
-/*  NavBar */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.line {
+  width: 50px;
+  height: 5px;
+  background-color: #a65200;
+  margin: 10px auto;
+}
+
+/* o===========>>>>>>>>>> NavBar <<<<<<<<<<===========o */
 
 nav {
   width: 100%;
@@ -76,6 +89,11 @@ nav .logo img {
   transition: border 0.5s;
 }
 
+li .scroll.active {
+  border-bottom: #ee4800 3px solid;
+  padding-bottom: 5px;
+}
+
 .bars {
   width: 35px;
   height: 35px;
@@ -96,18 +114,18 @@ nav .logo img {
   transform: rotate(90deg);
 }
 
-/****************  Hero  ****************/
+/* o===========>>>>>>>>>> Home <<<<<<<<<<===========o */
 
-.hero {
+.home {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.bg {
+.hero-image {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url("../images/powertower1.jpg");
   background-size: cover;
   background-position: center;
@@ -115,42 +133,43 @@ nav .logo img {
   background-attachment: fixed;
 }
 
-.bg-overlay {
-  position: absolute;
+.hero-overlay {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  position: absolute;
   opacity: 0.5;
   background-color: #000;
 }
 
-.main-content {
-  z-index: 1;
-  position: absolute;
+.home-content {
   width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  color: #fff;
   line-height: 1.8;
   text-align: center;
-  top: 35%;
-  color: #fff;
   animation: slideUp 1.5s;
 }
 
-.main-content h1 {
+.home-content h1 {
   font-size: 3em;
   letter-spacing: 20px;
   animation: slideRight 1.5s;
 }
 
 .products-btn {
-  border: 2px #ff4500 solid;
-  border-radius: 8px;
-  display: block;
-  margin: 20px auto;
-  color: #fff;
-  text-decoration: none;
-  padding: 6px;
   width: 200px;
   height: 35px;
+  margin: 20px auto;
+  padding: 6px;
+  display: block;
+  color: #fff;
   font-size: 18px;
+  text-decoration: none;
+  border: 2px #ff4500 solid;
+  border-radius: 8px;
 }
 
 @keyframes slideRight {
@@ -173,184 +192,25 @@ nav .logo img {
   }
 }
 
-/* about */
+/* o===========>>>>>>>>>> Products <<<<<<<<<<===========o */
 
-.about {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  display: flex;
-  margin: auto;
-  padding: 15px 50px;
-  min-height: 500px;
-  font-family: "helvetica";
-  position: relative;
-  background-color: #fff;
-  box-sizing: border-box;
-  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
-}
-
-.about-heading {
-  text-align: center;
-  line-height: 2;
-  margin-bottom: 20px;
-}
-
-.about-heading h3 {
-  font-size: 30px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: #0e1015;
-  font-family: "Helvetica";
-}
-
-.about-content {
-  padding: 20px;
-  text-align: justify;
-  color: #808080;
-  font-size: 18px;
-}
-
-/* products */
-.sample_section {
+.products {
   min-height: 700px;
+  margin: auto;
 }
 
-.sample_title {
+.products-heading {
   padding: 50px;
 }
 
-.sample_section h1 {
-  text-align: center;
+.products-heading h2 {
+  color: #0e1015;
   font-size: 30px;
   font-weight: 300;
-  letter-spacing: 2px;
-  color: #0e1015;
   font-family: "Helvetica";
-}
-
-.sample {
-  width: 100%;
-  height: 100%;
-  /* margin-top: 20px;
-    margin-bottom: 100px; */
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-/* .products_sample_bg {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/powertower2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.products_sample_overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  background-color: #fff;
-  opacity: 0.6;
-} */
-
-.products_sample {
-  height: 350px;
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  padding: 10px 50px;
-}
-
-.products_sample h2 {
+  letter-spacing: 2px;
   text-align: center;
 }
-
-.products_sample_list {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-}
-
-.products_sample_list li {
-  width: 25%;
-}
-
-/*  contact */
-.contact {
-  width: 100%;
-  min-height: 300px;
-}
-
-.contact_widget {
-  margin: 100px auto 50px;
-  width: 100%;
-  height: 100%;
-  color: #3f51b5;
-  text-align: center;
-}
-
-.contact_heading {
-  font-size: 1.8em;
-  letter-spacing: 8px;
-  color: #282e34;
-  text-align: center;
-}
-
-.contact_heading h2 {
-  font-weight: 300;
-}
-
-.contact_main {
-  color: #808080;
-}
-
-.contact_methods {
-  min-height: 200px;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.contact_method_icon {
-  color: #3f51b5;
-  font-size: 40px;
-  border: 2px solid #3f51b5;
-  border-radius: 50%;
-  margin: 20px 80px;
-  padding: 15px;
-  cursor: pointer;
-}
-
-/*  Footer  */
-.social {
-  background-color: #0e1015;
-  text-align: center;
-  width: 100%;
-  height: 150px;
-  color: #fff;
-}
-
-.social i {
-  position: relative;
-  top: 15%;
-  margin: 10px 15px;
-  color: #fff;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-/* list */
 
 .products-list {
   display: flex;
@@ -361,51 +221,102 @@ nav .logo img {
   justify-content: center;
 }
 
-/*  Card */
+/* ===>>> Card <<<=== */
+
 .card {
   width: 300px;
-  height: 350px;
-  background-color: #fff;
+  height: 380px;
   margin: 20px 10px;
   border-radius: 14px;
+  background-color: #fff;
   overflow: hidden;
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.card_head {
+.card-head {
   width: 300px;
   height: 200px;
   overflow: hidden;
 }
 
-.card_head img {
+.card-head img {
   width: 100%;
   height: 100%;
   transition: 1s;
 }
 
-.card_body {
-  text-align: center;
+.card-body {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
 }
 
-.card_body h4 {
+.card-body h4 {
   color: #0e1015;
   font-size: 20px;
   margin: 20px auto;
 }
 
-.card_body a {
-  box-sizing: border-box;
-  display: block;
-  text-decoration: none;
-  padding-top: 7px;
-}
-
-.card_head img:hover {
+.card-head img:hover {
   transform: scale(1.4, 1.4);
 }
 
-/* Team */
+.card-btn {
+  width: 130px;
+  height: 30px;
+  padding-top: 7px;
+  position: absolute;
+  right: 28%;
+  bottom: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #ee4800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* o===========>>>>>>>>>> About <<<<<<<<<<===========o */
+
+.about {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  margin: auto;
+  padding: 15px 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.about-heading {
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+.about-heading h3 {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #0e1015;
+}
+
+.about-body {
+  padding: 20px;
+  font-size: 18px;
+  color: #808080;
+  text-align: justify;
+}
+
+/* o===========>>>>>>>>>> Team <<<<<<<<<<===========o */
+
 .team {
   width: 100%;
   min-height: 500px;
@@ -414,62 +325,123 @@ nav .logo img {
   position: relative;
 }
 
-.team_bg {
-  position: absolute;
+.team-hero-image {
   width: 100%;
   height: 100%;
+  position: absolute;
   background-image: url("../images/team.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
 }
 
-.team_bg_overlay {
-  position: absolute;
-  z-index: 2;
+.team-hero-overlay {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 2;
   background-color: #000;
   opacity: 0.8;
 }
 
-.team_main {
-  position: absolute;
-  z-index: 3;
+.team-content {
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 3;
   text-align: center;
 }
 
-.team_main h2 {
-  color: #fff;
+.team-heading h2 {
   font-size: 35px;
   font-weight: 400;
+  color: #fff;
   letter-spacing: 4px;
 }
 
-/*  line  */
-.line {
-  width: 50px;
-  height: 5px;
-  background-color: #a65200;
-  margin: 10px auto;
+/* ===>>> members <<<=== */
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+}
+.member {
+  color: #fff;
+  text-align: center;
 }
 
-.btn {
-  margin: auto;
-  display: block;
-  width: 130px;
-  height: 30px;
-  color: #fff;
-  background-color: #ee4800;
-  border: none;
-  border-radius: 8px;
+.member-img {
+  width: 150px;
+  height: 150px;
+  margin: 35px auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.member-img img {
+  width: 250px;
+  height: 166px;
+}
+
+.member-info h1 {
+  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.member-info p {
+  padding: 0 25px;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/* o===========>>>>>>>>>> Contact <<<<<<<<<<===========o */
+
+.contact {
+  width: 100%;
+  min-height: 300px;
+  margin: 100px auto 50px;
+}
+
+.contact-heading {
+  letter-spacing: 8px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.contact-heading h2 {
+  font-weight: 300;
+  color: #282e34;
+}
+
+.contact-body {
+  min-height: 200px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  color: #3f51b5;
+}
+
+.contact-body a {
+  text-decoration: none;
+  color: #3f51b5;
+}
+
+.contact-icon {
+  margin: 20px 80px;
+  padding: 15px;
+  font-size: 40px;
+  border: 2px solid #3f51b5;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-/* map */
+/* o===========>>>>>>>>>> Map <<<<<<<<<<===========o */
+
 .googleMap {
   width: 100%;
   height: 400px;
@@ -482,7 +454,7 @@ nav .logo img {
   height: 100%;
 }
 
-/*  message  */
+/* o===========>>>>>>>>>> Message <<<<<<<<<<===========o */
 
 .message {
   width: 100%;
@@ -495,13 +467,14 @@ nav .logo img {
 
 .message > div {
   width: 80%;
+  max-width: 1200px;
   min-height: 500px;
-  background-color: #fff;
   margin: auto;
-  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -518,87 +491,80 @@ nav .logo img {
 .email input {
   width: 80%;
   height: 30px;
-  display: block;
   margin: 20px auto;
+  padding: 2px 15px;
+  display: block;
+  font-weight: 200;
+  color: #495057;
   border-radius: 8px;
   border: 1px solid #ced4da;
-  color: #495057;
-  padding: 2px 15px;
   transition: 0.3s;
-  font-weight: 200;
 }
 
 .email textarea {
   width: 82%;
   height: 150px;
-  border-radius: 8px;
   padding: 10px;
   font-weight: 200;
+  border-radius: 8px;
 }
 
-.get_in_touch {
+#submit {
+  width: 200px;
+  margin-top: 20px;
+  padding: 5px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: #a65200;
+  cursor: pointer;
+}
+
+.get-in-touch {
   width: 50%;
   height: 100%;
 }
 
-.get_in_touch p {
+.more-info p {
   margin-top: 20px;
   text-align: justify;
   font-weight: 100;
   font-size: 1.2rem;
   color: #4e4e4e;
 }
-/* members */
-.members {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: space-between;
+
+.more-info span {
+  width: 100%;
+  margin: 15px;
+  display: block;
+  text-align: left;
 }
 
-.member {
+.more-info i {
+  margin-right: 10px;
+  color: #a65200;
+}
+
+/* o===========>>>>>>>>>> Footer <<<<<<<<<<===========o */
+
+.social {
+  width: 100%;
+  height: 150px;
   text-align: center;
   color: #fff;
+  background-color: #0e1015;
 }
 
-.member_img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 35px auto 20px;
-}
-.member_img img {
-  width: 250px;
-  height: 166px;
+.social i {
+  margin: 10px 15px;
+  position: relative;
+  top: 15%;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
 }
 
-.member-info h1 {
-  font-weight: 300;
-  margin-bottom: 15px;
-  font-size: 36px;
-}
-
-.member-info p {
-  font-weight: 200;
-  font-size: 16px;
-  padding: 0 25px;
-}
-
-/* submit button */
-#submit {
-  width: 200px;
-  margin-top: 20px;
-}
-
-/* active */
-li .scroll.active {
-  border-bottom: #ee4800 3px solid;
-  padding-bottom: 5px;
-}
-
-/* BreakPoints */
+/* o===========>>>>>>>>>> BreakPoints <<<<<<<<<<===========o */
 
 @media only screen and (max-width: 600px) {
   /* navbar */
@@ -637,11 +603,11 @@ li .scroll.active {
   }
 
   /* products section */
-  .sample_title {
+  .section_title {
     padding: 20px;
   }
 
-  .sample_section h1 {
+  .products h2 {
     font-size: 24px;
   }
 
