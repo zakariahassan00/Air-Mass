@@ -1,9 +1,10 @@
 $(document).ready(function() {
-  // on documument scroll change the nav bar to fixed
+  // initiate the aos library
   AOS.init({
     duration: 1300
   });
 
+  // on documument scroll change the nav bar to fixed
   $(window).on("scroll", function() {
     let pagePosition = window.scrollY > 120;
     if (pagePosition) {
@@ -13,7 +14,7 @@ $(document).ready(function() {
     }
   });
 
-  // team section
+  // Team section Carousel
   $(".owl-carousel").owlCarousel({
     center: true,
     items: 1,
@@ -29,7 +30,7 @@ $(document).ready(function() {
     }
   });
 
-  // smooth scroll
+  // anaiamtion scroll
   let navElements = $(".scroll");
   navElements.on("click", function(e) {
     e.preventDefault();
@@ -43,7 +44,7 @@ $(document).ready(function() {
     );
   });
 
-  // add active class to nav elements
+  // add active class to nav elements corresponding to the displayed section
   $(window).scroll(function() {
     let scrollTop = $(this).scrollTop();
 
@@ -61,6 +62,7 @@ $(document).ready(function() {
     });
   });
 
+  //  navbar control (show/hide) on small devices
   $(".bars").click(function() {
     let navList = $(".nav-list").css("display");
     navList == "block" ? hideMenu() : showMenu();

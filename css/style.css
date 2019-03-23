@@ -319,7 +319,7 @@ li .scroll.active {
 
 .team {
   width: 100%;
-  min-height: 500px;
+  min-height: 550px;
   display: flex;
   align-items: center;
   position: relative;
@@ -523,6 +523,11 @@ li .scroll.active {
 .get-in-touch {
   width: 50%;
   height: 100%;
+  text-align: center;
+}
+
+.more-info {
+  padding: 20px;
 }
 
 .more-info p {
@@ -575,6 +580,7 @@ li .scroll.active {
     top: 35%;
     padding: 0;
   }
+
   .item {
     margin: 12px auto;
   }
@@ -588,30 +594,30 @@ li .scroll.active {
     display: block;
   }
 
-  /* hero */
-  .bg {
+  /* Home */
+  .hero-image {
     background-attachment: scroll;
   }
 
-  .main-content h1 {
+  .home-content h1 {
     font-size: 2em;
     letter-spacing: 10px;
   }
 
-  .main-content p {
+  .home-content p {
     padding: 5px;
   }
 
-  /* products section */
-  .section_title {
+  /* Products section */
+  .products-heading {
     padding: 20px;
   }
 
-  .products h2 {
+  .products-heading h2 {
     font-size: 24px;
   }
 
-  /* about section */
+  /* About section */
   .about {
     padding: 15px;
   }
@@ -621,7 +627,7 @@ li .scroll.active {
   }
 
   /* Team section */
-  .team_bg {
+  .team-hero-image {
     background-attachment: scroll;
   }
 
@@ -630,33 +636,19 @@ li .scroll.active {
     margin-top: 50px;
   }
 
-  /* message */
+  /* Message section */
   .message {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   .email {
     width: 100%;
     height: 100%;
   }
 
-  .get_in_touch {
+  .get-in-touch {
     width: 100%;
     height: 100%;
   }
-}
-
-@media only screen and (min-width: 600px) {
-  /* navbar */
-  /* .item {
-    width: 20%;
-  } */
-
-  /* .bg {
-    background-attachment: scroll;
-  }
-
-  .team_bg {
-    background-attachment: scroll;
-  } */
 }
